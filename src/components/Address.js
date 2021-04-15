@@ -71,7 +71,6 @@ evt.preventDefault();
     return (
 
       <div>
-        <DashboardHeader></DashboardHeader>
         <h1> Address</h1>
 
         <form onSubmit={(evt)=> this.handleSubmit(evt)}>

@@ -11,13 +11,7 @@ function DashboardHeader(props) {
 
     <nav>
       <ul>
-        <ul className="menuul">
-
         <li><Link to="/"style={style}>Log out</Link></li>
-        <li><Link to="/addMenu"style={style}>Add Menu</Link></li>
-        <li><Link to="/address"style={style}>Edit Info</Link></li>
-
-         </ul>
       </ul>
     </nav>
 

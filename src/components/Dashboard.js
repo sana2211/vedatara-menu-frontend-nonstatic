@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import DashboardHeader from "./DashboardHeader";
+import AddMenu from './AddMenu';
 //import Footer from "./footer";
-//import Address from "./Address";
+import Address from "./Address";
 //import AddEmployee from './AddEmployee';
 
 class Dashboard extends Component{
@@ -28,10 +29,11 @@ class Dashboard extends Component{
             <div className="dashboard">
              <DashboardHeader currentUser={this.state.fullname}></DashboardHeader>
                  <section>
-
+                 <AddMenu ></AddMenu>
                      </section>   
                      <br>
                      </br>
+                     <Address></Address>
                      </div>
 
       

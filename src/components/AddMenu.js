@@ -7,9 +7,9 @@ import DashboardHeader from "./DashboardHeader";
 export default class addMenu extends React.Component {
 
   state = {
-    NameOfTheDish: '',
-    artist: '',
-    url:  ''
+    title: '',
+    description: '',
+    calories:  ''
   }
   handleInput(evt)
   { 
@@ -32,13 +32,19 @@ export default class addMenu extends React.Component {
       alert("'Name of the dish' is Required");
       return false;
     }
-    fetch('https://localhost:3000/api/bookmarks/'+id, {
+    console.log(JSON.stringify({
+      'user_id': id,
+      'title': this.state.title, 
+      'calories': this.state.calories,
+      'description': this.state.description
+    }));
+    fetch('http://localhost:8000/api/restaurants/'+id, {
       method: 'POST',
       body: JSON.stringify({
         'user_id': id,
         'title': this.state.title, 
-        'artist': this.state.artist,
-        'url': this.state.url
+        'calories': this.state.calories,
+        'description': this.state.description
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -61,7 +67,6 @@ export default class addMenu extends React.Component {
 
 return (
 <div>
-        <DashboardHeader></DashboardHeader>
         <h1> Add Menu</h1>      
        
 <form onSubmit={(evt)=> this.handleSubmit(evt)} class="border" action="editAccount" >
@@ -77,13 +82,13 @@ return (
   </div>
   <p></p>
   <label htmlFor="Name of the Dish">Name of the Dish </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="name" id="name" required></input>
+  <input onChange={(evt)=>this.handleInput(evt)} type="name" name="title" required></input>
   <p></p>
-  <label htmlFor="Price of the Dish">Price of the Dish </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="price" id="price" required></input>
+  <label htmlFor="Description">Description </label>
+  <input onChange={(evt)=>this.handleInput(evt)} type="price" name="description" required></input>
   <p></p>
-  <label htmlFor="Ingredients"> Ingredients  </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="ingredients" id="ingredients" required></input>
+  <label htmlFor="Calories"> Calories  </label>
+  <input onChange={(evt)=>this.handleInput(evt)} type="ingredients" name="calories" required></input>
   <p></p>
   </fieldset> 
 
