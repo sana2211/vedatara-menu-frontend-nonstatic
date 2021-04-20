@@ -5,9 +5,9 @@ class Getmusic extends Component {
     state = { data: [] }
     async fetchAPI() {
         const a = window.location.href.split('/');
-  const id = a[a.length - 1]
-  console.log(id);
-        const baseURL1 = 'https://musicappbackend101.herokuapp.com/api/bookmarks/'+id;
+        const id = a[a.length - 1]
+        console.log(id);
+        const baseURL1 = 'http://localhost:8000/api/restaurants/'+id;
         const response = await fetch(baseURL1);
         const data = await response.json();
         console.log(data);
@@ -20,9 +20,10 @@ class Getmusic extends Component {
         this.fetchAPI();
       }
 
-      handleDelete = (musicid) =>
+      handleDelete = (menuid) =>
       {
-        fetch(`https://musicappbackend101.herokuapp.com/api/bookmarks/${`${musicid}`}`, {
+        console.log(menuid);
+        fetch(`http://localhost:8000/api/restaurants/${menuid}`, {
             method: 'DELETE',
         })
         .then(res => {
@@ -45,7 +46,7 @@ class Getmusic extends Component {
       return ( 
           <div>
               <h2>Get Menu</h2>
-              <form onSubmit={(evt)=> this.handleSubmit(evt)}>
+              <form className="form2" onSubmit={(evt)=> this.handleSubmit(evt)}>
           <div className="flex-container2">
             <div className="form-group"></div>
               <ul className="getmenu">

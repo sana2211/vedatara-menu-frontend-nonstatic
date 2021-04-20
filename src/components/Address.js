@@ -1,6 +1,5 @@
 import React from "react";
 import './login.css';
-import DashboardHeader from "./DashboardHeader";
 import Footer from "./footer";
 
 

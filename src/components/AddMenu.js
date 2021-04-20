@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "./footer";
 import './login.css';
-import DashboardHeader from "./DashboardHeader";
 
 
 export default class addMenu extends React.Component {
@@ -36,7 +35,7 @@ export default class addMenu extends React.Component {
     }
     console.log(JSON.stringify({
       'user_id': id,
-      'Kind of dish': this.state.kindOfDish, 
+      'type': this.state.kindOfDish, 
       'title': this.state.title,
       'description': this.state.description,
       'calories': this.state.calories,
@@ -46,7 +45,7 @@ export default class addMenu extends React.Component {
       method: 'POST',
       body: JSON.stringify({
         'user_id': id,
-        'Kind of dish': this.state.kindOfDish, 
+        'type': this.state.kindOfDish, 
         'title': this.state.title,
         'description': this.state.description,
         'calories': this.state.calories,
@@ -79,11 +78,11 @@ return (
 <fieldset>
   <p>What kind of food is served in your restaurant?</p>
   <div className="flexbox">
-  <input onChange={(evt)=>this.handleInput(evt)} type="checkbox" className="flex"></input>
+  <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex"></input>
       "Vegan"
-    <input onChange={(evt)=>this.handleInput(evt)} type="checkbox" className="flex"></input>
+    <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex"></input>
       "Veg"
-      <input onChange={(evt)=>this.handleInput(evt)} type="checkbox" className="flex"></input>
+      <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex"></input>
       "Non-Veg"
   </div>
   <p></p>
@@ -91,13 +90,13 @@ return (
   <input onChange={(evt)=>this.handleInput(evt)} type="name" name="title" required></input>
   <p></p>
   <label htmlFor="Description">Description </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="price" name="description" required></input>
+  <input onChange={(evt)=>this.handleInput(evt)} type="text" name="description" required></input>
   <p></p>
   <label htmlFor="Calories"> Calories  </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="ingredients" name="calories" required></input>
+  <input onChange={(evt)=>this.handleInput(evt)} type="text" name="calories" required></input>
   <p></p>
   <label htmlFor="Price">Price </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="name" name="title" required></input>
+  <input onChange={(evt)=>this.handleInput(evt)} type="text" name="price" required></input>
   <p></p>
   </fieldset> 
 
