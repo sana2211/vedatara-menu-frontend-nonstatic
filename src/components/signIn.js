@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
+import './login.css';
+import './header.css';
+
 
 //import { Link } from "react-router-dom";
 
@@ -50,9 +53,9 @@ export default class SignIn extends React.Component {
     return (
       <div>
         <Header></Header><br></br>
-        <form onSubmit={(evt)=> this.handleSubmit(evt)}>
+        <form className="form1" onSubmit={(evt)=> this.handleSubmit(evt)}>
           <div className="flex-container1">
-          <h1>Sign in</h1>
+          <h4>Sign in</h4>
 
             <div className="form-group">
               <label htmlFor="email">Email     </label>

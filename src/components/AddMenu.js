@@ -7,9 +7,11 @@ import DashboardHeader from "./DashboardHeader";
 export default class addMenu extends React.Component {
 
   state = {
+    kindOfDish:'',
     title: '',
     description: '',
-    calories:  ''
+    calories:  '',
+    price: ''
   }
   handleInput(evt)
   { 
@@ -29,22 +31,26 @@ export default class addMenu extends React.Component {
     evt.preventDefault();
     if(!this.state.title)
     {
-      alert("'Name of the dish' is Required");
+      alert("'Title' is Required");
       return false;
     }
     console.log(JSON.stringify({
       'user_id': id,
-      'title': this.state.title, 
+      'Kind of dish': this.state.kindOfDish, 
+      'title': this.state.title,
+      'description': this.state.description,
       'calories': this.state.calories,
-      'description': this.state.description
+      'price': this.state.price
     }));
     fetch('http://localhost:8000/api/restaurants/'+id, {
       method: 'POST',
       body: JSON.stringify({
         'user_id': id,
-        'title': this.state.title, 
+        'Kind of dish': this.state.kindOfDish, 
+        'title': this.state.title,
+        'description': this.state.description,
         'calories': this.state.calories,
-        'description': this.state.description
+        'price': this.state.price
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -81,7 +87,7 @@ return (
       "Non-Veg"
   </div>
   <p></p>
-  <label htmlFor="Name of the Dish">Name of the Dish </label>
+  <label htmlFor="Title"> Title </label>
   <input onChange={(evt)=>this.handleInput(evt)} type="name" name="title" required></input>
   <p></p>
   <label htmlFor="Description">Description </label>
@@ -89,6 +95,9 @@ return (
   <p></p>
   <label htmlFor="Calories"> Calories  </label>
   <input onChange={(evt)=>this.handleInput(evt)} type="ingredients" name="calories" required></input>
+  <p></p>
+  <label htmlFor="Price">Price </label>
+  <input onChange={(evt)=>this.handleInput(evt)} type="name" name="title" required></input>
   <p></p>
   </fieldset> 
 

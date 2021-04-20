@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './GetMusic.css';
+//import './GetMusic.css';
 
 class Getmusic extends Component {
     state = { data: [] }
@@ -44,18 +44,21 @@ class Getmusic extends Component {
     render() { 
       return ( 
           <div>
-              <h2>Get music</h2>
+              <h2>Get Menu</h2>
               <form onSubmit={(evt)=> this.handleSubmit(evt)}>
           <div className="flex-container2">
             <div className="form-group"></div>
-              <ul className="getmusicul">
+              <ul className="getmenu">
                   
               {
               this.state.data.map((item)=>{
                   return (<div class="flex-container2" key={item.id}>
-                          <li>TITLE: {item.title}</li><br></br>
-                          <li>ARTIST: {item.artist}</li><br></br>
-                          <li>URL: {item.url}</li>
+                          <li>Kind of Food: {item.kindoffood}</li><br></br>
+                          <li>Title: {item.title}</li><br></br>
+                          <li>Description: {item.description}</li>
+                          <li>Calories: {item.calories}</li>
+                          <li>Price: {item.price}</li>
+
                           <button onClick={()=>this.handleDelete(item.id)}>                         
                            <i className="fas fa-trash"></i>
                             </button>

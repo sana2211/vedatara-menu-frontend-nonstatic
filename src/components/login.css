@@ -3,6 +3,11 @@ h1{
   margin-top:-30px
   
 }
+h4{
+  font-size: 40px;
+  margin-top: -30px;
+  text-align: center;
+}
 .header {
     font-size: 2px;
     margin: 1px;
@@ -25,16 +30,15 @@ div{
     width: 180px;
     border-radius: 8px;
 }
-      
 form{
   margin: auto ;
-  margin-top:-80px;
+  margin-top:-110px;
   background-color: #fbb034;
-  display: flex;
+  display:column;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding: 0 50px;
+  padding: 30px 35px 3px 30px;
   min-height: 600px;
   max-height:500px;
   width: fit-content;
@@ -44,8 +48,9 @@ form{
   0 10px 10px rgba(148, 76, 76, 0.22);
 position: relative ;
 overflow: hidden;
-}
+width: 300px ;
 
+}
  
     button {
       border-radius: 20px;
@@ -55,16 +60,16 @@ overflow: hidden;
       font-size: 12px;
       font-weight: bold;
       padding: 12px 45px;
-    
       margin:auto;
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: transform 80ms ease-in;
+      margin-top: 10px;
   }
 
-  form1{
+  .form1{
   margin: auto ;
-  margin-top:-90px;
+  margin-top:40px;
   background-color: #fbb034;
   display: flex;
   align-items: flex-start;
@@ -80,7 +85,7 @@ overflow: hidden;
   0 10px 10px rgba(0, 0, 0, 0.22);
 position: relative ;
 overflow: hidden;
-width: 266px ;
+width: 260px ;
   }
 
   button:active {
@@ -101,42 +106,31 @@ width: 266px ;
     text-align: center;
     z-index: 999;
 }
-
-
-li {
-  color:whitesmoke;
-  text-decoration: none;
-  margin: 15px 0;
-  width: 100%;
-  padding-right: .9rem;
-
-}
-ul {
-text-transform: uppercase;
-font-size: 15px ;
-letter-spacing: .1rem;
-background-position: top left;
-background-repeat: repeat;
-cursor: pointer;
-  margin-top: 10px;
- float:right;
- color:white;
- font-weight: 700;   
-}
-nav  {
-color: white;
-font-size: 20px;
-color: coral;
-width: fit-content;
-font-size: 2px ;
-background-position: top right;
-background-repeat: repeat;
-background-color: black;
-} 
-
-
+  nav{
+  font-size: 20px;
+  color: #da8695;
+  letter-spacing: .5rem;
+  background-color: #222 ;
+  background-repeat: repeat;
+  opacity: 0.85;
+  width:fit-content;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+    text-decoration: none;
+    margin: 15px 0;
+    width: 100%;
+    padding-right: .9rem;
+  background-position: top right;
+  cursor: pointer;
+    margin-top: 1px;
+   float:right;
   
-      
+} 
 
         
         

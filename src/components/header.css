@@ -7,28 +7,27 @@ header {
 }
     h1{
     font-size: 3.0rem;
-    padding: 50px;
+    padding: 90px;
     font-weight: lighter;
-    color: black;
-    src:url("https://images.nycgo.com/image/fetch/q_65,c_fill,f_auto,w_750/https://www.nycgo.com/images/venues/2311/rc_image_view.jpg")
+    color: #da8695;
     }
 
     h2{
       font-size:18px;
-      margin-top: 60px;
-      font-weight: lighter;
+      margin-top: 20px;
+      color: #da8695;
+      font-weight: heavy;
 
     }
-
     li {
+      color:whitesmoke;
       text-decoration: none;
       margin: 15px 0;
       width: 100%;
       padding-right: .9rem;
-      background-color: black;
-
-  }
-  ul {
+      text-decoration: none;
+    }
+    ul {
     text-transform: uppercase;
     font-size: 15px ;
     letter-spacing: .1rem;
@@ -37,18 +36,23 @@ header {
     cursor: pointer;
       margin-top: 10px;
      float:right;
+     color:white;
      font-weight: 700;   
-     background-color: black;
-
 }
 nav  {
     font-size: 20px;
     color: coral;
-    width: fit-content;
     font-size: 2px ;
+    letter-spacing: .5rem;
+    background-color: #010100 !important;
+
     background-position: top left;
-    background-color: black;
+    background-repeat: repeat;
+    opacity: 0.85;
+    width: fit-content;
 } 
+
+
       div{
       word-wrap: break-word;
 
@@ -58,43 +62,19 @@ nav  {
       padding: 25px;
       width: 105px;
       margin:10px;
-      border-radius:10px;
       background-color:#738;
+
+      border-radius:10px;
       display:inline-table;
     }
 
-    
- 
-li {
-  color:whitesmoke;
-  text-decoration: none;
-  margin: 15px 0;
-  width: 100%;
-  padding-right: .9rem;
+    @media(min-width:400px) {
+      h2{
+        margin-top: 50px;
+    }
+  }
 
-}
-ul {
-text-transform: uppercase;
-font-size: 15px ;
-letter-spacing: .1rem;
-background-position: top left;
-background-repeat: repeat;
-cursor: pointer;
-  margin-top: 10px;
- float:right;
- color:white;
- font-weight: 700;   
-}
-nav  {
-color: white;
-font-size: 20px;
-color: coral;
-width: 100%;
-font-size: 2px ;
-background-position: top left;
-background-repeat: repeat;
-background-color: black;
-} 
+ 
 
  
   

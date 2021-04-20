@@ -44,8 +44,8 @@ export default class SignUp extends React.Component {
     return (
       <div>
         <Header></Header><br/><br></br>
-        <form className="form1" doeonSubmit={(evt)=> this.handleSubmit(evt)}>
-        <h1>Sign up</h1>
+        <form className="form1" onSubmit={(evt)=> this.handleSubmit(evt)}>
+            <h4> Sign up </h4>
 
           <div className="flex-container1">
             <div className="form-group">

@@ -73,7 +73,7 @@ evt.preventDefault();
       <div>
         <h1> Address</h1>
 
-        <form onSubmit={(evt)=> this.handleSubmit(evt)}>
+        <form  onSubmit={(evt)=> this.handleSubmit(evt)}>
 
         <fieldset>
   <label htmlFor="restaurantname">Restaurant : </label>

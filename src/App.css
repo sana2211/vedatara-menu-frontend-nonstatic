@@ -8,19 +8,15 @@ html, body
   padding:0;
   line-height: 1.5;
   text-align: center;
-  /*background-image: url("https://media.architecturaldigest.com/photos/5e20aa88e37a670009c031f0/16:9/w_2560%2Cc_limit/19101_press_fotografiska_12-7-19_199.jpg");*/
-	background-size: cover;
-	background-position: center;
-  background-repeat: no-repeat;
-  background-color: #F5F5F5;
-
+  background-image: url("https://media01.stockfood.com/largepreviews/MzkxMzcyMzk2/12624916-Bright-fresh-tasty-macaron-biscuits-on-grey-board-and-dry-fruits.jpg");
+ background-size: cover;
+  object-fit: cover;
 }
 
-  .main-title {	
-  height: 600px;
-  background-image: url("https://images.nycgo.com/image/fetch/q_65,c_fill,f_auto,w_750/https://www.nycgo.com/images/venues/2311/rc_image_view.jpg")
-}
  
+dashboard {
+  background: url(https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2547&q=80/dashboard.jpg) no-repeat center center fixed;
+  }
 #root
 {
   width: auto;
@@ -49,7 +45,8 @@ li{
 
 nav
 {
-width: 100%
+width: 100%;
+background: black;
 }
 
 .app{

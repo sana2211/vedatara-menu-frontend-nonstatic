@@ -3,6 +3,7 @@ import DashboardHeader from "./DashboardHeader";
 import AddMenu from './AddMenu';
 //import Footer from "./footer";
 import Address from "./Address";
+import GetMenu from "./GetMenu";
 //import AddEmployee from './AddEmployee';
 
 class Dashboard extends Component{
@@ -29,11 +30,11 @@ class Dashboard extends Component{
             <div className="dashboard">
              <DashboardHeader currentUser={this.state.fullname}></DashboardHeader>
                  <section>
-                 <AddMenu ></AddMenu>
+               <AddMenu ></AddMenu><Address></Address>
                      </section>   
+                     <GetMenu></GetMenu>
                      <br>
                      </br>
-                     <Address></Address>
                      </div>
 
       

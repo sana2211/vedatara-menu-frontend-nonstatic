@@ -14,8 +14,8 @@ function Header(props) {
         <nav>
            <ul className="menuul">
             <li><Link to="/"style={style}>Home</Link></li>
-            <li><Link to="/signup"style={style}>Sign-up</Link></li>
-            <li><Link to="/signin"style={style}>Sign-In</Link></li>
+            <li><Link to="/signup">Sign-up</Link></li>
+            <li><Link to="/signin">Sign-In</Link></li>
 
             </ul>
         </nav>
