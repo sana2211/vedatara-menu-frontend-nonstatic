@@ -76,16 +76,15 @@ return (
        
 <form onSubmit={(evt)=> this.handleSubmit(evt)} class="border" action="editAccount" >
 <fieldset>
-  <p>What kind of food is served in your restaurant?</p>
+  <p>What kind of food is served ?</p>
   <div className="flexbox">
-  <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex"></input>
+  <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex" required></input>
       "Vegan"
-    <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex"></input>
+    <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex" required></input>
       "Veg"
-      <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex"></input>
+      <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex" required></input>
       "Non-Veg"
   </div>
-  <p></p>
   <label htmlFor="Title"> Title </label>
   <input onChange={(evt)=>this.handleInput(evt)} type="name" name="title" required></input>
   <p></p>

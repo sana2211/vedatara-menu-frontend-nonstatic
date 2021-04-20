@@ -15,6 +15,26 @@ export default class addaddress extends React.Component {
     Timings: ''
   }
 
+  componentDidMount()
+  {
+    const a = window.location.href.split('/');
+        const id = a[a.length - 1]
+        console.log(id);
+    fetch('http://localhost:8000/api/address/'+id)
+    .then(response=>response)
+    .then(response=>{
+      this.setState({
+        'RestaurantName': response.RestaurantName, 
+        'StreetAddress': response.StreetAddress,
+        'PhoneNo': response.PhoneNo,
+        'City': response.City,
+        'Coutry': response.Country,
+        'Timings': response.Timings
+      })
+    })
+    .catch(err=>console.log(err))
+  }
+  
   handleInput(evt)
   { 
     
@@ -35,16 +55,15 @@ evt.preventDefault();
       alert("RestaurantName is Required");
       return false;
     }
-    fetch('https://localhost:3000/api/bookmarks/'+id, {
+    fetch('http://localhost:8000/api/address/'+id, {
       method: 'POST',
       body: JSON.stringify({
-        'user_id': id,
         'RestaurantName': this.state.RestaurantName, 
-        'StreetAddress': this.state.streetAddress,
-        'PhoneNo': this.state.phoneNo,
-        'City': this.state.city,
-        'Country': this.state.country,
-        'Timings': this.state.timings
+        'StreetAddress': this.state.StreetAddress,
+        'PhoneNo': this.state.PhoneNo,
+        'City': this.state.City,
+        'Coutry': this.state.Country,
+        'Timings': this.state.Timings
 
       }),
       headers: {
@@ -76,18 +95,18 @@ evt.preventDefault();
 
         <fieldset>
   <label htmlFor="restaurantname">Restaurant : </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="text" id="restaurantname" name="restaurantname"/><br></br>
+  <input onChange={(evt)=>this.handleInput(evt)} type="text" id="RestaurantName" name="RestaurantName" value={this.state.RestaurantName} required></input>
   <label htmlFor="address">Street : </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="text" id="address" name="address"/><br></br>
+  <input onChange={(evt)=>this.handleInput(evt)} type="text" id="StreetAddress" name="StreetAddress" value={this.state.StreetAddress} required></input>
   <label htmlFor="phone">Phone No: </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="integer" id="phone" name="phone"/><br></br>
+  <input onChange={(evt)=>this.handleInput(evt)} type="integer" id="PhoneNo" name="PhoneNo" value={this.state.PhoneNo} required></input>
   <label htmlFor="city">City: </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="text" id="city" name="city"/><br></br>
+  <input onChange={(evt)=>this.handleInput(evt)} type="text" id="City" name="City"required></input>
   <label htmlFor="country">Country: </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="text" id="country" name="country"/><br></br>
+  <input onChange={(evt)=>this.handleInput(evt)} type="text" id="Country" name="Country"required></input>
   
   <label htmlFor="timings">Timings: </label>
-  <input onChange={(evt)=>this.handleInput(evt)} type="number" id="timings" name="timings"/><br></br>
+  <input onChange={(evt)=>this.handleInput(evt)} type="number" id="Timings" name="Timings"required></input>
   </fieldset>
   <button>Add</button>
 

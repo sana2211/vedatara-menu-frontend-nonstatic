@@ -51,7 +51,11 @@ overflow: hidden;
 width: 300px ;
 
 }
- 
+ .flexbox{
+  margin-top: -20px;
+
+   margin-left: -90px;
+ }
     button {
       border-radius: 20px;
       border: 1px solid #FF4B2B;
@@ -87,7 +91,26 @@ position: relative ;
 overflow: hidden;
 width: 260px ;
   }
-
+  .form2{
+    margin: auto ;
+    margin-top:40px;
+    background-color: #fbb034;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    min-height: 523px;
+    max-height:430px;
+    width: fit-content;
+    text-align: center;
+    border-radius: 30px; 
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative ;
+  overflow: hidden;
+  width: 260px ;
+    }
   button:active {
       transform: scale(0.95);
   }

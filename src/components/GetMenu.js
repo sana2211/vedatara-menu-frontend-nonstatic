@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import './GetMusic.css';
 
-class Getmusic extends Component {
+class GetMenu extends Component {
     state = { data: [] }
     async fetchAPI() {
         const a = window.location.href.split('/');
@@ -54,6 +54,7 @@ class Getmusic extends Component {
               {
               this.state.data.map((item)=>{
                   return (<div class="flex-container2" key={item.id}>
+     
                           <li>Kind of Food: {item.kindoffood}</li><br></br>
                           <li>Title: {item.title}</li><br></br>
                           <li>Description: {item.description}</li>
@@ -76,4 +77,4 @@ class Getmusic extends Component {
   }
 }
 
-export default Getmusic;
+export default GetMenu;
