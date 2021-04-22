@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import './GetMusic.css';
+import './GetMenu.css';
 
 class GetMenu extends Component {
     state = { data: [] }
@@ -57,9 +57,9 @@ class GetMenu extends Component {
      
                           <li>Kind of Food: {item.kindoffood}</li><br></br>
                           <li>Title: {item.title}</li><br></br>
-                          <li>Description: {item.description}</li>
-                          <li>Calories: {item.calories}</li>
-                          <li>Price: {item.price}</li>
+                          <li>Description: {item.description}</li><br></br>
+                          <li>Calories: {item.calories}</li><br></br>
+                          <li>Price: {item.price}</li><br></br>
 
                           <button onClick={()=>this.handleDelete(item.id)}>                         
                            <i className="fas fa-trash"></i>

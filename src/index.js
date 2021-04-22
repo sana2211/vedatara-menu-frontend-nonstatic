@@ -8,7 +8,6 @@ import SignUp from './components/signUp';
 import SignIn from './components/signIn';
 
 import Dashboard from './components/Dashboard';
-import Address from './components/Address';
 import AddMenu from './components/AddMenu';
 
 ReactDOM.render(
@@ -18,9 +17,7 @@ ReactDOM.render(
       <Route exact={true} path="/"><App /></Route>
       <Route path="/signup"><SignUp></SignUp></Route>
       <Route path="/signin"><SignIn></SignIn></Route>
-
       <Route path="/dashboard/"><Dashboard></Dashboard></Route>
-      <Route path="/Address/"><Address ></Address ></Route>
       <Route path="/AddMenu/"><AddMenu ></AddMenu></Route>
 
     </Switch>

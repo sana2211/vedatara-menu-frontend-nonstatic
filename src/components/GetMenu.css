@@ -1,0 +1,42 @@
+h2{
+    font-size: 40px;
+}
+.form-group {
+    margin: auto ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    color:black;   
+  }
+  .flex-container2 {
+    color:black;   
+
+     min-width: 20em;
+    min-height: 30em;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+    position: relative;
+    display:inline-flexbox;
+    box-shadow: 0 0 2px rgba(15, 15 , 15 0.28);
+    overflow-wrap: break-word;
+    padding: 0 40px 10px;
+    margin: 5px 5px 50px -85px;
+    overflow-x: auto;
+  }
+  
+  li{
+    width: auto;
+    word-wrap: break-word;
+    color:black;   
+
+  
+  }
+  @media (max-width: 400px) {
+   
+    .flex-container2{
+      min-width: 15em;
+      }
+  }
+  
+  

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import DashboardHeader from "./DashboardHeader";
 import AddMenu from './AddMenu';
 //import Footer from "./footer";
-import Address from "./Address";
 import GetMenu from "./GetMenu";
 
 
@@ -30,7 +29,7 @@ class Dashboard extends Component{
             <div className="dashboard">
              <DashboardHeader currentUser={this.state.fullname}></DashboardHeader>
                  <section>
-               <AddMenu ></AddMenu><Address></Address>
+               <AddMenu ></AddMenu>
                      </section>   
                      <GetMenu></GetMenu>
                      <br>

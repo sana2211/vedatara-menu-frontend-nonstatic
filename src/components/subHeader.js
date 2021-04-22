@@ -9,7 +9,7 @@ class SubHeader extends Component {
    
         <h2>
         An app for Restaurant owners or managers where they can add and update the info related to their Restaurants. <br></br>
-        They will be able to add the restaurant details , address info, update/edit/delete menus served in the restaurant. <br></br>
+        They will be able to update/edit/delete menus served in the restaurant. <br></br>
         </h2>              
        </div>   
         )
