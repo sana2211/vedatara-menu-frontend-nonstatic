@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, Component } from "react";
 import './App.css';
 //mport signIn from "./components/signIn";
 //import signUp from "./components/signUp";
@@ -7,17 +7,42 @@ import Header from "./components/header";
 import SubHeader from "./components/subHeader";
 import Footer from "./components/footer";
 
-function App() {
-  return (
+class App extends Component{
+  state= {
+    data: []
+  }
+  componentDidMount()
+  {
+    fetch("http://localhost:8000/api/restaurants")
+        .then(res=>res.json())
+        .then(res => this.setState({
+          data: res
+          }))
+          .catch(error => {
+            console.error(error)
+          });
+    }
+render()
+  {
+    console.log(this.state.data);
+    return (
     <div className="app">
       <Header>
       </Header>
       <main>
       <SubHeader></SubHeader>
       </main>
+      <ul>
+      {
+        <li>{JSON.stringify(this.state.data)}</li>
+      }
+      </ul>
+      
       <Footer></Footer>
     </div>
   );
+  }
+
 }
 
 export default App;
