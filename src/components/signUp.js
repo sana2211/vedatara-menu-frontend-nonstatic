@@ -6,7 +6,10 @@ export default class SignUp extends React.Component {
   state = {
     fullname: '',
     email: '',
-    pasword:  ''
+    password:  '',
+    jobTitle: '',
+    address:  '',
+
   }
 
   handleInput(evt)
@@ -26,7 +29,11 @@ export default class SignUp extends React.Component {
       body: JSON.stringify({
         'fullname': this.state.fullname, 
         'email': this.state.email,
-        'password': this.state.password
+        'password': this.state.password,
+        'jobTitle': this.state.jobTitle,
+        'address': this.state.address
+
+
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -44,13 +51,21 @@ export default class SignUp extends React.Component {
     return (
       <div>
         <Header></Header><br/><br></br>
-        <form className="form1" onSubmit={(evt)=> this.handleSubmit(evt)}>
+        <form className="form3" onSubmit={(evt)=> this.handleSubmit(evt)}>
             <h4> Sign up </h4>
 
           <div className="flex-container1">
             <div className="form-group">
               <label htmlFor="fullname">Fullname</label>
               <input onChange={(evt)=>this.handleInput(evt)} type="text" name="fullname" placeholder="fullname" required/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="jobTitle">Job Title</label>
+              <input onChange={(evt)=>this.handleInput(evt)} type="text" name="jobTitle" placeholder="jobTitle" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="address">Address</label>
+              <input onChange={(evt)=>this.handleInput(evt)} type="text" name="address" placeholder="address" required />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>

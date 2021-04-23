@@ -31,7 +31,7 @@ html, body
   height: auto;
 
 }
-h1{
+h1,h2{
   font-size: 12px;
 }
 .App

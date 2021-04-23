@@ -13,8 +13,9 @@ header {
     }
 
     h2{
-      font-size:18px;
-      margin-top: 20px;
+      font-size:13px;
+
+      margin-top: 90px;
       color: #da8695;
       font-weight: heavy;
 
@@ -45,18 +46,15 @@ nav  {
     font-size: 2px ;
     letter-spacing: .5rem;
     background-color: #010100 !important;
-
     background-position: top left;
     background-repeat: repeat;
     opacity: 0.85;
     width: fit-content;
 } 
-
-
       div{
       word-wrap: break-word;
-
     }
+
   .button-link{
       color:#fff;
       padding: 25px;
@@ -68,9 +66,11 @@ nav  {
       display:inline-table;
     }
 
-    @media(min-width:400px) {
+    @media(max-width:400px) {
       h2{
-        margin-top: 50px;
+        margin-top: 6px;
+        background-color:#696969;
+
     }
   }
 

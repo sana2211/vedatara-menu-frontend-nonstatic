@@ -51,7 +51,7 @@ export default class SignIn extends React.Component {
       
   render() {
     return (
-      <div class="dashboard">
+      <div className="dashboard">
         <Header></Header><br></br>
         <form className="form1" onSubmit={(evt)=> this.handleSubmit(evt)}>
           <div className="flex-container1">

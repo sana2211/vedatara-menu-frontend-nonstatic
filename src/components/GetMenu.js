@@ -45,7 +45,7 @@ class GetMenu extends Component {
     render() { 
       return ( 
           <div>
-              <h2>Get Menu</h2>
+              <h1>Get Menu</h1>
               <form className="form2" onSubmit={(evt)=> this.handleSubmit(evt)}>
           <div className="flex-container2">
             <div className="form-group"></div>

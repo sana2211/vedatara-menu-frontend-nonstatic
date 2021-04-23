@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './header.css';
 
 class SubHeader extends Component {
     state = {  }
