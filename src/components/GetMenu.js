@@ -7,7 +7,7 @@ class GetMenu extends Component {
         const a = window.location.href.split('/');
         const id = a[a.length - 1]
         console.log(id);
-        const baseURL1 = 'http://localhost:8000/api/restaurants/'+id;
+        const baseURL1 = 'https://serene-retreat-26485.herokuapp.com/api/restaurants/'+id;
         const response = await fetch(baseURL1);
         const data = await response.json();
         console.log(data);
@@ -23,7 +23,8 @@ class GetMenu extends Component {
       handleDelete = (menuid) =>
       {
         console.log(menuid);
-        fetch(`http://localhost:8000/api/restaurants/${menuid}`, {
+        fetch(`https://serene-retreat-26485.herokuapp.com/
+        /api/restaurants/${menuid}`, {
             method: 'DELETE',
         })
         .then(res => {
@@ -45,7 +46,7 @@ class GetMenu extends Component {
     render() { 
       return ( 
           <div>
-              <h1>Get Menu</h1>
+              <h2>Get Menu</h2>
               <form className="form2" onSubmit={(evt)=> this.handleSubmit(evt)}>
           <div className="flex-container2">
             <div className="form-group"></div>
@@ -53,9 +54,9 @@ class GetMenu extends Component {
                   
               {
               this.state.data.map((item)=>{
-                  return (<div class="flex-container2" key={item.id}>
+                  return (<div className="flex-container2" key={item.id}>
      
-                          <li>Kind of Food: {item.kindoffood}</li><br></br>
+                          <li>Kind of Food: {item.kindOfFood}</li><br></br>
                           <li>Title: {item.title}</li><br></br>
                           <li>Description: {item.description}</li><br></br>
                           <li>Calories: {item.calories}</li><br></br>

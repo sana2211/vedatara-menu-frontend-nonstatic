@@ -12,7 +12,7 @@ class Dashboard extends Component{
     componentWillMount(){
         const a = window.location.href.split('/');
         const id = a[a.length - 1]
-        fetch(`http://localhost:8000/api/users/${id}`)
+        fetch(`https://vedatara-menu-backend.herokuapp.com/${id}`)
         .then(result=>result.json())
         .then(result=>{
           this.setState({

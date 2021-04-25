@@ -6,7 +6,7 @@ import './login.css';
 export default class addMenu extends React.Component {
 
   state = {
-    kindOfDish:'',
+    kindofdish:'',
     title: '',
     description: '',
     calories:  '',
@@ -25,7 +25,7 @@ export default class addMenu extends React.Component {
       //Add validation
   const a = window.location.href.split('/');
   const id = a[a.length - 1]
-  console.log(id);
+  //console.log(id);
 
     evt.preventDefault();
     if(!this.state.title)
@@ -41,7 +41,7 @@ export default class addMenu extends React.Component {
       'calories': this.state.calories,
       'price': this.state.price
     }));
-    fetch('http://localhost:8000/api/restaurants/'+id, {
+    fetch('https://serene-retreat-26485.herokuapp.com/api/restaurants/'+id, {
       method: 'POST',
       body: JSON.stringify({
         'user_id': id,
@@ -66,7 +66,7 @@ export default class addMenu extends React.Component {
         }
       })
     .catch(err=>console.log(err))
-  }
+    }
   render() {
     //const { menu } = this.props
 

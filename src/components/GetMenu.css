@@ -2,28 +2,47 @@ h2{
     font-size: 20px;
 }
 .form-group {
+  margin: auto ;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  color:black;   
+}
+  .form2{
     margin: auto ;
+    margin-top:40px;
+    background-color: #fbb034;
     display: flex;
+    align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
-    align-items: flex-start; 
-    color:black;   
-  }
-  .flex-container2 {
-    color:black;   
-
-     min-width: 20em;
-    min-height: 30em;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 7px;
-    position: relative;
-    display:inline-flexbox;
-    box-shadow: 0 0 2px rgba(15, 15 , 15 0.28);
-    overflow-wrap: break-word;
-    padding: 0 40px 10px;
-    margin: 5px 5px 50px -85px;
-    overflow-x: auto;
-  }
+    padding: 0 40px;
+    min-height: 523px;
+    max-height:430px;
+    width: fit-content;
+    text-align: center;
+    border-radius: 30px; 
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative ;
+  overflow: hidden;
+  width: 260px ;
+    }
+    .flex-container2 {
+      color:black;   
+  
+    
+      flex-direction: column;
+      align-items: center;
+      border-radius: 7px;
+      position: relative;
+      display:inline-flexbox;
+      box-shadow: 0 0 2px rgba(15, 15 , 15 0.28);
+      overflow-wrap: break-word;
+      padding: 20px 40px 0 40px;
+      margin: 5px 5px 50px -85px;
+      overflow-x: auto;
+    }
   
   li{
     width: auto;
@@ -35,7 +54,7 @@ h2{
   @media (max-width: 400px) {
    
     .flex-container2{
-      min-width: 15em;
+  
       }
   }
   
