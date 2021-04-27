@@ -1,4 +1,5 @@
 
+
 html, body
 {
   width: auto;
@@ -8,14 +9,13 @@ html, body
   padding:0;
   line-height: 1.5;
   text-align: center;
-  background-image: url("https://media01.stockfood.com/largepreviews/MzkxMzcyMzk2/12624916-Bright-fresh-tasty-macaron-biscuits-on-grey-board-and-dry-fruits.jpg");
+  background-color:#696969;
  background-size: cover;
  background-repeat: no-repeat;
  object-fit: cover;
  background-position:center center;
   background-attachment:fixed;
 } 
-
 
 #root
 {

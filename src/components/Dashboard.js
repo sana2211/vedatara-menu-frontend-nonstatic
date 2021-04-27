@@ -9,10 +9,10 @@ class Dashboard extends Component{
     state = {
         fullname: ''
     }
-    componentWillMount(){
+    componentWilMount(){
         const a = window.location.href.split('/');
         const id = a[a.length - 1]
-        fetch(`https://vedatara-menu-backend.herokuapp.com/${id}`)
+        fetch(`https://serene-retreat-26485.herokuapp.com/api/users/${id}`)
         .then(result=>result.json())
         .then(result=>{
           this.setState({

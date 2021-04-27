@@ -6,7 +6,7 @@ class SubHeader extends Component {
     render() { 
         return (
         <div className="main-title">
-             <h1>Restaurant Management </h1> 
+             <h1>Aperitif App</h1> 
    
         <h2>
         An app for Restaurant owners or managers where they can add and update the info related to their Restaurants. <br></br>

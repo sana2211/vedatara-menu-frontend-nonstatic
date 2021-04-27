@@ -1,4 +1,4 @@
-import React, { useEffect,Component } from "react";
+import React, {Component } from "react";
 import './App.css';
 //mport signIn from "./components/signIn";
 //import signUp from "./components/signUp";
@@ -13,7 +13,7 @@ class App extends Component{
   }
   componentDidMount()
   {
-    fetch("https://vedatara-menu-backend.herokuapp.com/api/restaurants")
+    fetch("https://serene-retreat-26485.herokuapp.com/api/restaurants")
         .then(res=>res.json())
         .then(res => this.setState({
           data: res

@@ -6,8 +6,9 @@ import './login.css';
 export default class addMenu extends React.Component {
 
   state = {
-    kindofdish:'',
+
     title: '',
+    type: '',
     description: '',
     calories:  '',
     price: ''
@@ -25,7 +26,7 @@ export default class addMenu extends React.Component {
       //Add validation
   const a = window.location.href.split('/');
   const id = a[a.length - 1]
-  //console.log(id);
+  console.log(id);
 
     evt.preventDefault();
     if(!this.state.title)
@@ -33,23 +34,19 @@ export default class addMenu extends React.Component {
       alert("'Title' is Required");
       return false;
     }
-    console.log(JSON.stringify({
-      'user_id': id,
-      'type': this.state.kindOfDish, 
-      'title': this.state.title,
-      'description': this.state.description,
-      'calories': this.state.calories,
-      'price': this.state.price
-    }));
-    fetch('https://serene-retreat-26485.herokuapp.com/api/restaurants/'+id, {
+  
+    fetch('https://serene-retreat-26485.herokuapp.com/api/restaurants/'+id,{
+
+    
       method: 'POST',
       body: JSON.stringify({
         'user_id': id,
-        'type': this.state.kindOfDish, 
         'title': this.state.title,
         'description': this.state.description,
         'calories': this.state.calories,
-        'price': this.state.price
+        'price': this.state.price, //convert this with parseDouble
+        'type': this.state.type, 
+
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -63,8 +60,7 @@ export default class addMenu extends React.Component {
         {
           alert("Menu Updated!");
           window.location.reload();
-        }
-      })
+        }  })
     .catch(err=>console.log(err))
     }
   render() {
@@ -74,9 +70,9 @@ return (
 <div>
         <h1> Add Menu</h1>      
        
-<form onSubmit={(evt)=> this.handleSubmit(evt)} class="border" action="editAccount" >
+<form onSubmit={(evt)=> this.handleSubmit(evt)} className="border" action="editAccount" >
 <fieldset>
-  <p>What kind of food is served ?</p>
+  <p>What type of food is served ?</p>
   <div className="flexbox">
   <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex" required></input>
       "Vegan"
