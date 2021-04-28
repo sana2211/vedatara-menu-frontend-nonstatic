@@ -34,7 +34,16 @@ render()
       </main>
       <ul>
       {
-        <li>{JSON.stringify(this.state.data)}</li>
+        <li>{
+          this.state.data.map(item=>{
+            return(<li>
+              <li>Title:{item.title}</li>
+              <li>Title:{item.type}</li>
+              <li>description:{item.description}</li>
+              <li>Type:{item.calories}</li>
+              <li>{item.price}</li>
+              </li>)
+          })}</li>
       }
       </ul>
       
