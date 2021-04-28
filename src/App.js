@@ -38,10 +38,10 @@ render()
           this.state.data.map(item=>{
             return(<li>
               <li>Title:{item.title}</li>
-              <li>Title:{item.type}</li>
+              <li>Type:{item.type}</li>
               <li>description:{item.description}</li>
               <li>Type:{item.calories}</li>
-              <li>{item.price}</li>
+              <li>Price{item.price}</li>
               </li>)
           })}</li>
       }
