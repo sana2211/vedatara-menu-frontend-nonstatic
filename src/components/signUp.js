@@ -23,7 +23,7 @@ export default class SignUp extends React.Component {
   }
   handleSubmit = (evt) => {
     evt.preventDefault();
-    fetch('https://vedatara-menu-backend.herokuapp.com/api/users', 
+    fetch('https://serene-retreat-26485.herokuapp.com/api/users', 
     {
       method: 'POST',
       body: JSON.stringify({

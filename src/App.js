@@ -32,20 +32,6 @@ render()
       <main>
       <SubHeader></SubHeader>
       </main>
-      <ul>
-      {
-        <li>{
-          this.state.data.map(item=>{
-            return(<li>
-              <li>Title:{item.title}</li>
-              <li>Type:{item.type}</li>
-              <li>description:{item.description}</li>
-              <li>Type:{item.calories}</li>
-              <li>Price{item.price}</li>
-              </li>)
-          })}</li>
-      }
-      </ul>
       
       <Footer></Footer>
     </div>

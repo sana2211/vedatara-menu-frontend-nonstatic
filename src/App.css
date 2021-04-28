@@ -2,6 +2,7 @@
 
 html, body
 {
+  
   width: auto;
   height: 100%;
   font-family: Arial,sans-serif;
@@ -9,7 +10,7 @@ html, body
   padding:0;
   line-height: 1.5;
   text-align: center;
-  background-color:#696969;
+  background-image: url("https://media01.stockfood.com/largepreviews/MzkxMzcyMzk2/12624916-Bright-fresh-tasty-macaron-biscuits-on-grey-board-and-dry-fruits.jpg");
  background-size: cover;
  background-repeat: no-repeat;
  object-fit: cover;
