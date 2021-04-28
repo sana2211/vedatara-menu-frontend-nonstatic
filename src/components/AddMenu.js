@@ -17,6 +17,7 @@ export default class addMenu extends React.Component {
   { 
     
     const {name, value} = evt.currentTarget;
+    console.log(value)
     this.setState({
       [name]: value,
     });
@@ -74,11 +75,11 @@ return (
 <fieldset>
   <p>What type of food is served ?</p>
   <div className="flexbox">
-  <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex" required></input>
+  <input value="Vegan" name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex" required></input>
       "Vegan"
-    <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex" required></input>
+    <input value="Veg" name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex" required></input>
       "Veg"
-      <input name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex" required></input>
+      <input value="Non-Veg" name="type" onChange={(evt)=>this.handleInput(evt)} type="radio" className="flex" required></input>
       "Non-Veg"
   </div>
   <label htmlFor="Title"> Title </label>

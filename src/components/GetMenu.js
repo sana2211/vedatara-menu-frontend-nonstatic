@@ -6,11 +6,9 @@ class GetMenu extends Component {
     async fetchAPI() {
         const a = window.location.href.split('/');
         const id = a[a.length - 1]
-   console.log(id);
         const baseURL1 = 'https://serene-retreat-26485.herokuapp.com/api/restaurants/'+id;
         const response = await fetch(baseURL1);
         const data = await response.json();
-        console.log(data);
         this.setState({
             data: data
         })
@@ -22,8 +20,8 @@ class GetMenu extends Component {
 
       handleDelete = (menuid) =>
       {
-        console.log(menuid);
-        fetch(`https://serene-retreat-26485.herokuapp.com/api/restaurants/${`${menuid}`}`, {
+       
+        fetch(`https://serene-retreat-26485.herokuapp.com/api/restaurants/${menuid}`, {
                method: 'DELETE',
         })                    
         .then(res => {
@@ -46,7 +44,7 @@ class GetMenu extends Component {
       return ( 
           <div>
               <h5>Get Menu</h5>
-              <form className="form2" onSubmit={(evt)=> this.handleSubmit(evt)}>
+              <div className="form2" >
           <div className="flex-container2">
             <div className="form-group"></div>
               <ul className="getmenu">
@@ -55,7 +53,7 @@ class GetMenu extends Component {
               this.state.data.map((item)=>{
                   return (<div className="flex-container2" key={item.id}>
      
-                          <li>Type of Food: {item.typeOfFood}</li><br></br>
+                          <li>Type of Food: {item.type}</li><br></br>
                           <li>Title: {item.title}</li><br></br>
                           <li>Description: {item.description}</li><br></br>
                           <li>Calories: {item.calories}</li><br></br>
@@ -71,7 +69,7 @@ class GetMenu extends Component {
                }
                </ul>
           </div>
-          </form>
+          </div>
           </div>
        );
   }
