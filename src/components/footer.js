@@ -5,7 +5,7 @@ class  Footer extends Component {
     render() { 
         return (
             <footer>
-                <h3>&copy; 2021 Restaurant Management</h3>
+                <h3>&copy; 2021 Aperitif App</h3>
             
             </footer>
           );
