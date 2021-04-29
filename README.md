@@ -9,9 +9,14 @@ Landing Page:
 <img width="1380" alt="Screen Shot 2021-04-29 at 1 58 03 PM" src="https://user-images.githubusercontent.com/70413361/116534250-574b3d00-a8f3-11eb-8394-10f32a1a79a6.png">
 
 SignUp: 
+
+
 <img width="622" alt="Screen Shot 2021-04-29 at 1 58 44 PM" src="https://user-images.githubusercontent.com/70413361/116536109-967a8d80-a8f5-11eb-9736-acee327b9a6c.png">
+
 Sign-In:
+
 <img width="461" alt="Screen Shot 2021-04-29 at 1 59 04 PM" src="https://user-images.githubusercontent.com/70413361/116536140-9e3a3200-a8f5-11eb-80b3-e36ea6ea549e.png">
+
 Dashboard:
 
 <img width="438" alt="Screen Shot 2021-04-29 at 1 59 18 PM" src="https://user-images.githubusercontent.com/70413361/116536182-aa25f400-a8f5-11eb-8f07-197df73dc005.png">
