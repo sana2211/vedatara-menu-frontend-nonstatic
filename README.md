@@ -22,6 +22,9 @@ Dashboard:
 <img width="438" alt="Screen Shot 2021-04-29 at 1 59 18 PM" src="https://user-images.githubusercontent.com/70413361/116536182-aa25f400-a8f5-11eb-8f07-197df73dc005.png">
 <img width="329" alt="Screen Shot 2021-04-29 at 1 59 27 PM" src="https://user-images.githubusercontent.com/70413361/116536188-ac884e00-a8f5-11eb-9a15-49a31b0b4899.png">
 
+Key Technology - React, HTML, CSS, JavaScript ,Node,PostgresSQL, Express
+
+Contact Info - sanafaizsiddiqui@me.com
 
 # Getting Started with Create React App
 
