@@ -1,3 +1,15 @@
+The Vibrato Music can be viewed here- https://vedatara-menu-frontend-nonstatic-sana2211.vercel.app 
+
+
+Overview- This app allows you to add/delete menus for the restaurants. An app for Restaurant owners or managers where they can add and update the info related to their Restaurants.
+
+
+Screenshots of app: 
+Landing Page:
+<img width="1380" alt="Screen Shot 2021-04-29 at 1 58 03 PM" src="https://user-images.githubusercontent.com/70413361/116534250-574b3d00-a8f3-11eb-8394-10f32a1a79a6.png">
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
